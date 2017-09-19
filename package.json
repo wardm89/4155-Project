@@ -1,0 +1,30 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "mean stack HR dashboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wardm89/4155-Project.git"
+  },
+  "dependencies": {
+    "express":"*",
+    "mongoose":"*",
+    "bcryptjs":"*",
+    "cors":"*",
+    "jsonwebtoken":"*",
+    "body-parser":"*",
+    "passport":"*",
+    "passport-jwt":"*"
+  },
+  "author": "Matt Ward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wardm89/4155-Project/issues"
+  },
+  "homepage": "https://github.com/wardm89/4155-Project#readme"
+}
