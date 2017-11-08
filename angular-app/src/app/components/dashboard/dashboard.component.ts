@@ -48,17 +48,6 @@ export class DashboardComponent implements OnInit {
       console.log(dataset);
       update();
     });
-    $("#doughnut-chart_3").click(function(e) {
-      var activePoints = newDC_3.getElementsAtEvent(e)[0];
-      var dataset = newDC_3.data.datasets[activePoints._datasetIndex].data;
-
-      $("#doughnut_1").hide();
-      $("#doughnut_2").hide();
-      $("#doughnut_0").hide();
-      alert(dataset);
-      console.log(dataset);
-      update();
-    });
 
     $(".random").click(function(e) {
       newDC_0.data.datasets[0].data = [27,526,73,780,43];
@@ -91,6 +80,7 @@ export class DashboardComponent implements OnInit {
           text: 'Races Percentage As A Whole'
         },
         onClick: function (evt, item) {
+
         }
       }
     });
@@ -124,27 +114,6 @@ export class DashboardComponent implements OnInit {
             label: "Race",
             backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
             data: [25,395,203,784,433]
-          }
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'Races Percentage As A Whole'
-        },
-        onClick: function (evt, item) {
-        }
-      }
-    });
-    var newDC_3 = new Chart(document.getElementById("doughnut-chart_3"), {
-      type: 'doughnut',
-      data: {
-        labels: ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White"],
-        datasets: [
-          {
-            label: "Race",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [25,305,504,74,403]
           }
         ]
       },
