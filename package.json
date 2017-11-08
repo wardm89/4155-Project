@@ -12,15 +12,21 @@
     "url": "git+https://github.com/wardm89/4155-Project.git"
   },
   "dependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/core": "^5.0.0",
     "bcryptjs": "*",
     "body-parser": "*",
+    "chart.js": "^2.7.1",
     "cors": "*",
     "express": "*",
+    "jquery": "^3.2.1",
     "jsonwebtoken": "*",
     "mongoose": "*",
+    "ng2-charts": "^1.6.0",
     "nodemon": "^1.12.1",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "rxjs": "^5.5.2"
   },
   "author": "Matt Ward",
   "license": "ISC",
@@ -29,6 +35,7 @@
   },
   "homepage": "https://github.com/wardm89/4155-Project#readme",
   "devDependencies": {
-    "@angular/cli": "^1.4.3"
+    "@angular/cli": "^1.4.3",
+    "@types/jquery": "^3.2.16"
   }
 }

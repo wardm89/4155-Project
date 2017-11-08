@@ -16,6 +16,9 @@ import {FlashMessagesModule} from 'angular2-flash-messages';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {AuthGuard} from './guard/auth.guard';
+import { ChartsModule } from 'ng2-charts';
+
+
 
 const appRoutes: Routes = [
     {path:'',           component: HomeComponent},
@@ -40,7 +43,8 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         FlashMessagesModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        ChartsModule
   ],
   providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
