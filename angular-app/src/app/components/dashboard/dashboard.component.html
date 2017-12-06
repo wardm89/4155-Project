@@ -1,54 +1,145 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.2.js"></script>
-<div class="container-fluid">
+
+<div class="container">
   <div class="row">
 
 
     <main class="col-sm-12 ml-sm-auto col-md-12 pt-4" role="main">
 
 <!------------------------------------------------------------------------------------------>
-      <div style="float: left">
-        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+      <div class="container jumbotron">
+        <div id="overview">
+          <h2>Overview</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="doughnut_1" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="doughnut-chart_1" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="doughnut_2" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="doughnut-chart_2" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="genderOverview_0" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="genderOverview-chart_0" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+
+
+
+        <div id="locations">
+          <h2>Employee Retention For Locations And Divisions</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="location_0" class="chartOverView">
+                <div  style="display: block">
+                  <canvas id="location-chart_0" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="location_1" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="location-chart_1" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="location_2" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="location-chart_2" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div id="positions">
+          <h2>Interior</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="salary_0" class="chartOverView">
+                <div  style="display: block">
+                  <canvas id="salary-chart_0" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="gender_0" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="gender-chart_0" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>Tires</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="salary_1" class="chartOverView">
+                <div  style="display: block">
+                  <canvas id="salary-chart_1" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="gender_1" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="gender-chart_1" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>Chassis & Safety</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="salary_2" class="chartOverView">
+                <div  style="display: block">
+                  <canvas id="salary-chart_2" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="gender_2" class="chartOverView" >
+                <div  style="display: block">
+                  <canvas id="gender-chart_2" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div id="age">
+          <div class="row">
+            <div class="col-md-4">
+              <div id="femaleAgeBar" class="chartOverView">
+                <div  style="display: block">
+                  <canvas id="femaleAge" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div id="maleAgeBar" class="chartOverView">
+                <div  style="display: block">
+                  <canvas id="maleAge" width="350" height="450"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="back" onclick="goBack()"> Back</button>
+
       </div>
-
-      <div class="row">
-        <div id="doughnut_0" class="chartOverView">
-          <div  style="display: block">
-            <canvas id="doughnut-chart_0" width="350" height="450"></canvas>
-          </div>
-          <button class="random">Update</button>
-        </div>
-        <div id="doughnut_1" class="chartOverView">
-          <div  style="display: block">
-            <canvas id="doughnut-chart_1" width="350" height="450"></canvas>
-          </div>
-          <button class="random">Update</button>
-        </div>
-        <div id="doughnut_2" class="chartOverView">
-          <div  style="display: block">
-            <canvas id="doughnut-chart_2" width="350" height="450"></canvas>
-          </div>
-          <button class="random">Update</button>
-        </div>
-        <div id="doughnut_3" class="chartOverView" style="display: none">
-          <div  style="display: block">
-            <canvas id="doughnut-chart_3" width="350" height="450"></canvas>
-          </div>
-          <button class="random">Update</button>
-        </div>
-      </div>
-
-
 
 
     </main>

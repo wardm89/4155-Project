@@ -10,96 +10,77 @@ import $ from 'jquery/dist/jquery.slim';
 export class DashboardComponent implements OnInit {
 
   constructor() {
-
   }
 //test
   ngOnInit() {
 
-    $("#doughnut-chart_0").click(function(e) {
-      var activePoints = newDC_0.getElementsAtEvent(e)[0];
-      var dataset = newDC_0.data.datasets[activePoints._datasetIndex].data;
 
-      $("#doughnut_1").hide();
-      $("#doughnut_2").hide();
-      $("#doughnut_3").hide();
-      alert(dataset);
-      console.log(dataset);
-      update();
-    });
+    $("#locations").hide();
+    $("#positions").hide();
+    $("#age").hide();
+
+
     $("#doughnut-chart_1").click(function(e) {
       var activePoints = newDC_1.getElementsAtEvent(e)[0];
       var dataset = newDC_1.data.datasets[activePoints._datasetIndex].data;
 
-      $("#doughnut_0").hide();
-      $("#doughnut_2").hide();
-      $("#doughnut_3").hide();
-      alert(dataset);
-      console.log(dataset);
-      update();
-    });
-    $("#doughnut-chart_2").click(function(e) {
-      var activePoints = newDC_2.getElementsAtEvent(e)[0];
-      var dataset = newDC_2.data.datasets[activePoints._datasetIndex].data;
+      $("#overview").hide();
+      $("#locations").show();
 
-      $("#doughnut_1").hide();
-      $("#doughnut_0").hide();
-      $("#doughnut_3").hide();
-      alert(dataset);
-      console.log(dataset);
-      update();
     });
 
-    $(".random").click(function(e) {
-      newDC_0.data.datasets[0].data = [27,526,73,780,43];
-      alert(newDC_0.data.datasets[0].data);
-      update();
+    $("#location-chart_0").click(function(e) {
+      var activePoints = location_0.getElementsAtEvent(e)[0];
+      var dataset = location_0.data.datasets[activePoints._datasetIndex].data;
+      $("#locations").hide();
+      $("#positions").show();
     });
 
-    function update()
-    {
-      newDC_0.update();
+    $("#salary-chart_0").click(function(e) {
+
+      $("#positions").hide();
+      $("#age").show();
+    });
+
+    $("#maleAgeBar").click(function(e) {
+
+    });
+
+    $("#back").click(function(e) {
+      goBack();
+    });
+
+    function goBack(){
+      $("#locations").hide();
+      $("#positions").hide();
+      $("#age").hide();
+      $("#overview").show();
     }
 
+    // $(".random").click(function(e) {
+    //   newDC_0.data.datasets[0].data = [27,526,73,780,43];
+    //   alert(newDC_0.data.datasets[0].data);
+    //   update();
+    // });
 
 
-     var newDC_0 = new Chart(document.getElementById("doughnut-chart_0"), {
-      type: 'doughnut',
-      data: {
-        labels: ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White"],
-        datasets: [
-          {
-            label: "Race",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [25,35,734,784,433]
-          }
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'Races Percentage As A Whole'
-        },
-        onClick: function (evt, item) {
 
-        }
-      }
-    });
+
     var newDC_1 = new Chart(document.getElementById("doughnut-chart_1"), {
       type: 'doughnut',
       data: {
-        labels: ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White"],
+        labels: ["Current", "Target"],
         datasets: [
           {
-            label: "Race",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [205,35,734,784,433]
+            backgroundColor: ["#54a335", "Grey"],
+            data: [40,20]
           }
         ]
       },
       options: {
         title: {
           display: true,
-          text: 'Races Percentage As A Whole'
+          text: 'Employee Retention (Months)'
         },
         onClick: function (evt, item) {
         }
@@ -108,64 +89,499 @@ export class DashboardComponent implements OnInit {
     var newDC_2 = new Chart(document.getElementById("doughnut-chart_2"), {
       type: 'doughnut',
       data: {
-        labels: ["American Indian or Alaska Native", "Asian", "Black or African American", "Native Hawaiian or Other Pacific Islander", "White"],
+        labels: ["Current"],
         datasets: [
           {
-            label: "Race",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [25,395,203,784,433]
+            backgroundColor: ["#ad2222", "Grey"],
+            data: [50,10]
           }
         ]
       },
       options: {
         title: {
           display: true,
-          text: 'Races Percentage As A Whole'
+          text: 'Time To Fill Job Positions(Months)'
         },
         onClick: function (evt, item) {
         }
       }
     });
 
-  function changeChart(value)
-    {
 
 
-    }
 
-  function randomize() {
-      // Only Change 3 values
-      let data = [
-        Math.round(Math.random() * 100),
-        59,
-        80,
-        (Math.random() * 100),
-        56,
-        (Math.random() * 100),
-        40];
-    let clone = JSON.parse(JSON.stringify(this.newDC));
-    clone[0].data = data;
-    this.newDC = clone;
-    /**
-     * (My guess), for Angular to recognize the change in the dataset
-     * it has to change the dataset variable directly,
-     * so one way around it, is to clone the data, change it and then
-     * assign it;
-     */
+
+
+
+
+
+
+    var gender_bar_0 = new Chart(document.getElementById("maleAge"), {
+      type: 'bar',
+      data: {
+        labels: ["Under 30", "30-50", "50+"],
+        datasets: [
+          {
+            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+            data: [5,5,2]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Terminated Males'
+        },
+        scales: {
+          xAxes: [{
+            display: true
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              steps: 10,
+              stepValue: 5,
+              max: 10,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Total'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+
+    var gender_bar_1 = new Chart(document.getElementById("femaleAge"), {
+      type: 'bar',
+      data: {
+        labels: ["Under 30", "30-50", "50+"],
+        datasets: [
+          {
+            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+            data: [4,7,1]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Terminated Females'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              steps: 10,
+              stepValue: 5,
+              max: 10,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Total'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+
+
+
+
+
+    var location_0 = new Chart(document.getElementById("location-chart_0"), {
+      type: 'bar',
+      data: {
+        labels: ["Interior", "Tires", "Chassis & Safety"],
+        datasets: [
+          {
+            backgroundColor: ["#54a335", "#cec937","#ad2222"],
+            data: [30,70,150]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Troy'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              steps: 10,
+              stepValue: 5,
+              max: 200,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Months'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+    var location_1 = new Chart(document.getElementById("location-chart_1"), {
+      type: 'bar',
+      data: {
+        labels: ["Interior", "Tires", "Chassis & Safety"],
+        datasets: [
+          {
+            backgroundColor: ["#cec937", "#cec937","#ad2222"],
+            data: [60,70,200]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Sumpter'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              steps: 10,
+              stepValue: 5,
+              max: 200,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Months'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+    var location_2 = new Chart(document.getElementById("location-chart_2"), {
+      type: 'bar',
+      data: {
+        labels: ["Interior", "Tires", "Chassis & Safety"],
+        datasets: [
+          {
+            backgroundColor: ["#ad2222", "#cec937","#54a335"],
+            data: [120,80,40]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Mt. Vernon'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              steps: 10,
+              stepValue: 5,
+              max: 200,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Months'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+
+
+
+
+
+
+    //Overview page
+    var genderOverview = new Chart(document.getElementById("genderOverview-chart_0"), {
+      type: 'pie',
+      data: {
+        labels: ["Male", "Female", "Unknown"],
+        datasets: [
+          {
+            label: "Gender",
+            backgroundColor: ["#3e95cd", "#8e5ea2"],
+            data: [545,423,16]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Gender of Employees'
+        },
+        onClick: function (evt, item) {
+
+        }
+      }
+    });
+
+
+    ////Location Position Statistics
+
+    var genderForPosition = new Chart(document.getElementById("gender-chart_0"), {
+      type: 'pie',
+      data: {
+        labels: ["Male", "Female", "Unknown"],
+        datasets: [
+          {
+            label: "Gender",
+            backgroundColor: ["#3e95cd", "#8e5ea2"],
+            data: [6,5,1]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Gender of Terminated Employees'
+        },
+        onClick: function (evt, item) {
+
+        }
+      }
+    });
+
+
+
+    var salary_bar_0 = new Chart(document.getElementById("salary-chart_0"), {
+      type: 'bar',
+      data: {
+        labels: ["Grade 8", "Grade 9", "Grade 10", "Hourly",],
+        datasets: [
+          {
+            backgroundColor: ["#54a335","#cec937","#54a335","#ad2222"],
+            data: [2,4,1,8]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Salary Classification'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              stepValue: 1,
+              max: 12,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Employees Terminated'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+
+
+
+
+    var salary_bar_1 = new Chart(document.getElementById("salary-chart_1"), {
+      type: 'bar',
+      data: {
+        labels: ["Grade 8", "Grade 9", "Grade 10", "Hourly",],
+        datasets: [
+          {
+            backgroundColor: ["#54a335","#cec937","#54a335","#ad2222"],
+            data: [2,4,1,8]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Salary Classification'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              stepValue: 1,
+              max: 12,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Employees Terminated'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+
+    var genderForPosition1 = new Chart(document.getElementById("gender-chart_1"), {
+      type: 'pie',
+      data: {
+        labels: ["Male", "Female", "Unknown"],
+        datasets: [
+          {
+            label: "Gender",
+            backgroundColor: ["#3e95cd", "#8e5ea2"],
+            data: [6,5,1]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Gender of Terminated Employees'
+        },
+        onClick: function (evt, item) {
+
+        }
+      }
+    });
+
+
+
+    var salary_bar_2 = new Chart(document.getElementById("salary-chart_2"), {
+      type: 'bar',
+      data: {
+        labels: ["Grade 8", "Grade 9", "Grade 10", "Hourly",],
+        datasets: [
+          {
+            backgroundColor: ["#54a335","#cec937","#54a335","#ad2222"],
+            data: [2,4,1,8]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Salary Classification'
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }],
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              stepValue: 1,
+              max: 12,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Employees Terminated'
+            },
+          }]
+        },
+        legend: {
+          display: false,
+        },
+        onClick: function (evt, item) {
+        }
+      }
+    });
+
+    var genderForPosition2 = new Chart(document.getElementById("gender-chart_2"), {
+      type: 'pie',
+      data: {
+        labels: ["Male", "Female", "Unknown"],
+        datasets: [
+          {
+            label: "Gender",
+            backgroundColor: ["#3e95cd", "#8e5ea2"],
+            data: [6,5,1]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Gender of Terminated Employees'
+        },
+        onClick: function (evt, item) {
+
+        }
+      }
+    });
+
+
   }
-  }
-  ////////////////////////////////////////
-
-
-  // events
-  public chartClicked(e:any):void {
-    console.log(e);
-  }
-
-  public chartHovered(e:any):void {
-    console.log(e);
-  }
-
 
 
 }

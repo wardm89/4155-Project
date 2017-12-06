@@ -390,17 +390,28 @@
       <workItem from="1505822314741" duration="16681000" />
       <workItem from="1506040170966" duration="24153000" />
       <workItem from="1506792844965" duration="412000" />
+<<<<<<< Updated upstream
       <workItem from="1509941451292" duration="14239000" />
       <workItem from="1510152124786" duration="151000" />
       <workItem from="1510152291267" duration="2771000" />
+=======
+      <workItem from="1509941451292" duration="14483000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="58407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="11" width="1780" height="1030" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="55729000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="0" width="1889" height="1047" extended-state="1" />
+>>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756633" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

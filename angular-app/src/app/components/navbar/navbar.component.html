@@ -1,13 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-warning">
-    <a class="navbar-brand " href="#">Continental</a>
 
-    <div class=" " id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <ul class="nav navbar-nav navbar-left">
-                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item active"><a  [routerLink]="['/']"><span class="sr-only">(current)</span>Home</a></li>
-                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item"><a  [routerLink]="['/dashboard']">Dashboard</a></li>
-                <li class="nav-item"><a (click)="onLogoutClick()"  href="#">Logout</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container">
+        <a class="navbar-brand " href="#">Continental</a>
+
+        <div class=" " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <ul class="nav navbar-nav navbar-left">
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item active"><a  [routerLink]="['/']"><span class="sr-only">(current)</span>Home</a></li>
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item"><a  [routerLink]="['/dashboard']">Dashboard</a></li>
+                    <li class="nav-item"><a (click)="onLogoutClick()"  href="#">Logout</a></li>
+                </ul>
             </ul>
-        </ul>
+        </div>
     </div>
 </nav>
+
