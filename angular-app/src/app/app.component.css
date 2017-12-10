@@ -1,0 +1,12 @@
+.bg {
+    /* The image used */
+    background-image: url("http://blog.tomsforeign.com/wp-content/uploads/2014/05/continental_tire_tech.gif");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

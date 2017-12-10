@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Continental HR Dashboard';
+  title = '/continental_tire_tech.gif';
 }

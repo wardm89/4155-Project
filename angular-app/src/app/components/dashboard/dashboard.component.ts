@@ -451,7 +451,7 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             backgroundColor: ["#54a335","#cec937","#54a335","#ad2222"],
-            data: [2,4,1,8]
+            data: [4,2,1,8]
           }
         ]
       },
@@ -496,7 +496,7 @@ export class DashboardComponent implements OnInit {
           {
             label: "Gender",
             backgroundColor: ["#3e95cd", "#8e5ea2"],
-            data: [6,5,1]
+            data: [4,5,1]
           }
         ]
       },
@@ -519,8 +519,8 @@ export class DashboardComponent implements OnInit {
         labels: ["Grade 8", "Grade 9", "Grade 10", "Hourly",],
         datasets: [
           {
-            backgroundColor: ["#54a335","#cec937","#54a335","#ad2222"],
-            data: [2,4,1,8]
+            backgroundColor: ["#54a335","#cec937","#54a335","#54a335"],
+            data: [2,4,1,4]
           }
         ]
       },
@@ -565,7 +565,7 @@ export class DashboardComponent implements OnInit {
           {
             label: "Gender",
             backgroundColor: ["#3e95cd", "#8e5ea2"],
-            data: [6,5,1]
+            data: [3,3,0]
           }
         ]
       },
