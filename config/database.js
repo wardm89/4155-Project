@@ -5,6 +5,6 @@
 
 
 module.exports  = {
-    database:   'mongodb://localhost:27017/test',
+    database:   'mongodb://admin:password123@ds137246.mlab.com:37246/heroku_34qd9kft',
     secret:     'secretToken'
 };
