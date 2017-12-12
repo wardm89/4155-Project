@@ -15,13 +15,15 @@ export class AuthService {
   registerUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://kpidashboard.herokuapp.com:3000/users/register', user).map(response => response.json());
+    return this.http.post('https://kpidashboard.herokuapp.com:3000/users/register', user, {headers: headers})
+        .map(response => response.json());
   }
 
   authenticateUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://kpidashboard.herokuapp.com:3000/users/authenticate', user).map(response => response.json());
+    return this.http.post('https://kpidashboard.herokuapp.com:3000/users/authenticate', user, {headers: headers})
+        .map(response => response.json());
   }
 
   storeUserDate(token, user){
