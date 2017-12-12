@@ -59,7 +59,7 @@ export class AuthService {
     if(this.isDev){
       return ep;
     } else {
-      return 'https://localhost:3000/'+ep;
+      return 'http://localhost:3000/'+ep;
     }
   }
 }
