@@ -15,13 +15,13 @@ export class AuthService {
   registerUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://localhost:3000/users/register', user, {headers: headers}).map(response => response.json());
+    return this.http.post('http://localhost:3000/users/register', user, {headers: headers}).map(response => response.json());
   }
 
   authenticateUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://localhost:3000/users/authenticate', user, {headers: headers}).map(response => response.json());
+    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers}).map(response => response.json());
   }
 
   storeUserDate(token, user){
@@ -59,7 +59,7 @@ export class AuthService {
     if(this.isDev){
       return ep;
     } else {
-      return 'https://localhost:3000/'+ep;
+      return 'http://localhost:3000/'+ep;
     }
   }
 }
