@@ -108,14 +108,14 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             backgroundColor: ["#ad2222", "Grey"],
-            data: [50,10]
+            data: [45,10]
           }
         ]
       },
       options: {
         title: {
           display: true,
-          text: 'Time To Fill Job Positions(Months)'
+          text: 'Time To Fill Job Positions(Days)'
         },
         onClick: function (evt, item) {
         }
