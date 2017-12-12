@@ -87,7 +87,7 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             backgroundColor: ["#54a335", "Grey"],
-            data: [40,20]
+            data: [50,10]
           }
         ]
       },
@@ -220,7 +220,7 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             backgroundColor: ["#54a335", "#cec937","#ad2222"],
-            data: [30,70,150]
+            data: [60,40,20]
           }
         ]
       },
@@ -242,7 +242,7 @@ export class DashboardComponent implements OnInit {
               beginAtZero: true,
               steps: 10,
               stepValue: 5,
-              max: 200,
+              max: 100,
             },
             scaleLabel: {
               display: true,
@@ -264,7 +264,7 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             backgroundColor: ["#cec937", "#cec937","#ad2222"],
-            data: [60,70,200]
+            data: [50,45,30]
           }
         ]
       },
@@ -286,7 +286,7 @@ export class DashboardComponent implements OnInit {
               beginAtZero: true,
               steps: 10,
               stepValue: 5,
-              max: 200,
+              max: 100,
             },
             scaleLabel: {
               display: true,
@@ -308,7 +308,7 @@ export class DashboardComponent implements OnInit {
         datasets: [
           {
             backgroundColor: ["#ad2222", "#cec937","#54a335"],
-            data: [120,80,40]
+            data: [15,40,80]
           }
         ]
       },
@@ -330,7 +330,7 @@ export class DashboardComponent implements OnInit {
               beginAtZero: true,
               steps: 10,
               stepValue: 5,
-              max: 200,
+              max: 100,
             },
             scaleLabel: {
               display: true,
